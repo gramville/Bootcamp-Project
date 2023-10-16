@@ -4,6 +4,7 @@
     {
         public int id { get; set; }
         public string brandName { get; set; }
+        public string slug { get; set; }
         
     }
 }
