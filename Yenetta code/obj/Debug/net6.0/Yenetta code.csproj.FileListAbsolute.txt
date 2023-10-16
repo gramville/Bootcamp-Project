@@ -1,0 +1,31 @@
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\bin\Debug\net6.0\appsettings.json
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\bin\Debug\net6.0\Yenetta code.staticwebassets.runtime.json
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\bin\Debug\net6.0\Yenetta code.exe
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\bin\Debug\net6.0\Yenetta code.deps.json
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\bin\Debug\net6.0\Yenetta code.runtimeconfig.json
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\bin\Debug\net6.0\Yenetta code.dll
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\bin\Debug\net6.0\Yenetta code.pdb
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\obj\Debug\net6.0\Yenetta code.csproj.AssemblyReference.cache
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\obj\Debug\net6.0\Yenetta code.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\obj\Debug\net6.0\Yenetta code.AssemblyInfoInputs.cache
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\obj\Debug\net6.0\Yenetta code.AssemblyInfo.cs
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\obj\Debug\net6.0\Yenetta code.csproj.CoreCompileInputs.cache
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\obj\Debug\net6.0\Yenetta code.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\obj\Debug\net6.0\Yenetta code.RazorAssemblyInfo.cache
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\obj\Debug\net6.0\Yenetta code.RazorAssemblyInfo.cs
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\obj\Debug\net6.0\staticwebassets\msbuild.Yenetta code.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\obj\Debug\net6.0\staticwebassets\msbuild.build.Yenetta code.props
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Yenetta code.props
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Yenetta code.props
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\obj\Debug\net6.0\scopedcss\bundle\Yenetta code.styles.css
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\obj\Debug\net6.0\scopedcss\projectbundle\Yenetta code.bundle.scp.css
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\obj\Debug\net6.0\Yenetta code.dll
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\obj\Debug\net6.0\refint\Yenetta code.dll
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\obj\Debug\net6.0\Yenetta code.pdb
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\obj\Debug\net6.0\Yenetta code.genruntimeconfig.cache
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\obj\Debug\net6.0\ref\Yenetta code.dll
