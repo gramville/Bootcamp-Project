@@ -1,4 +1,6 @@
-﻿namespace Yenetta_code.Models.Services
+﻿using Yenetta_code.Models.DTOs.ResponseDTOs;
+
+namespace Yenetta_code.Models.Services
 {
     public class ProductService : IProductService
     {
@@ -26,9 +28,21 @@
         {
             return await _context.products.FirstOrDefaultAsync(temp => temp.id == id);
         }
-        public async Task<List<Product>> GetAll()
+        public async Task<List<ProductResponseDTO>> GetAll()
         {
-            return await _context.products.Where(temp => temp.quantity > 0 && !temp.isDeleted).OrderBy(temp => temp.quantity).ToListAsync();
+            var products = await _context.products.Where(temp => temp.quantity > 0 && !temp.isDeleted).Include(I => I.Category).Include(I => I.Brand).OrderBy(temp => temp.quantity).ToListAsync();
+            var productResponse = products.Select(products => new ProductResponseDTO
+            {
+                id = products.id,
+                productName = products.productName,
+                description = products.description,
+                price = products.price,
+                quantity = products.quantity,
+                brandName = products.Brand.brandName,
+                categoryName = products.Category.categoryName
+
+            }).ToList();
+            return productResponse;
         }
         public async Task<bool> ProductExists(int id)
         {

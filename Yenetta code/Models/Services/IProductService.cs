@@ -1,4 +1,6 @@
-﻿namespace Yenetta_code.Models.Services
+﻿using Yenetta_code.Models.DTOs.ResponseDTOs;
+
+namespace Yenetta_code.Models.Services
 {
     public interface IProductService
     {
@@ -6,7 +8,7 @@
         Task<int> Update(Product product);
         Task Delete(Product product);
         Task<Product> GetById(int id);
-        Task<List<Product>> GetAll();
+        Task<List<ProductResponseDTO>> GetAll();
         Task<bool> ProductExists(int id);
         Task<bool> ProductNameExists(string productSlug);
     }
