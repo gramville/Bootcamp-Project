@@ -190,6 +190,8 @@ C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\bin\Debug\n
 C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\bin\Debug\net6.0\Microsoft.Build.Tasks.Core.dll
 C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\bin\Debug\net6.0\Microsoft.Build.Utilities.Core.dll
 C:\Users\BURUK\Desktop\Bootcamp-Project-for-yenetta-cde\Yenetta code\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.Scripting.dll

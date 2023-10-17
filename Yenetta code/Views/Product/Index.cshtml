@@ -3,6 +3,18 @@
 @{
     ViewData["Title"] = "Index";
 }
+@if (TempData["AddedProduct"] != null)
+{
+    <div class="alert alert-success">@TempData["AddedProduct"]</div>
+}
+@if (TempData["UpdatedProduct"] != null)
+{
+    <div class="alert alert-success">@TempData["UpdatedProduct"]</div>
+}
+@if (TempData["DeletedProduct"] != null)
+{
+    <div class="alert alert-success">@TempData["DeletedProduct"]</div>
+}
 
 <h1>Index</h1>
 
