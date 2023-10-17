@@ -2,6 +2,7 @@
 using System.Security.Principal;
 using Yenetta_code.Models;
 using Yenetta_code.Models.DTOs.AddDTOs;
+using Yenetta_code.Models.DTOs.ResponseDTOs;
 using Yenetta_code.Models.DTOs.UpdateDTOs;
 
 namespace Yenetta_code.Configurations
@@ -19,6 +20,8 @@ namespace Yenetta_code.Configurations
              .ForMember(dest => dest.description, opt => opt.Condition((src, dest) => src.description != null))
               .ForMember(dest => dest.price, opt => opt.Condition((src, dest) => src.price != null))
                .ForMember(dest => dest.quantity, opt => opt.Condition((src, dest) => src.quantity != null));
+            CreateMap<Product, ProductResponseDTO>();
+            CreateMap<ProductResponseDTO, Product>();
             CreateMap<Brand,AddBrandDTO>();
             CreateMap<AddBrandDTO,Brand>();
             CreateMap<Brand, UpdateBrandDTO>();

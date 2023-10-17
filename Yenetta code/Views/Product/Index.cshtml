@@ -37,10 +37,10 @@
                 @Html.DisplayNameFor(model => model.quantity)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Brand)
+                @Html.DisplayNameFor(model => model.Brand.brandName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Category)
+                @Html.DisplayNameFor(model => model.Category.categoryName)
             </th>
             <th></th>
         </tr>
@@ -61,7 +61,7 @@
                 @Html.DisplayFor(modelItem => item.quantity)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Brand.id)
+                @Html.DisplayFor(modelItem => item.Brand.brandName)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Category.id)
