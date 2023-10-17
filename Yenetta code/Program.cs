@@ -1,7 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using Yenetta_code.Models;
+using Yenetta_code.Models.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//Registering the services
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IBrandService, BrandService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
