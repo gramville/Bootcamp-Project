@@ -10,6 +10,5 @@
         public int quantity { get; set; }
         public string brandName { get; set; }
         public string categoryName { get; set; }
-        public bool isDeleted { get; set; } = false;
     }
 }

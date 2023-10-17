@@ -30,18 +30,24 @@ namespace Yenetta_code.Models.Services
         }
         public async Task<List<ProductResponseDTO>> GetAll()
         {
-            var products = await _context.products.Where(temp => temp.quantity > 0 && !temp.isDeleted).Include(I => I.Category).Include(I => I.Brand).OrderBy(temp => temp.quantity).ToListAsync();
-            var productResponse = products.Select(products => new ProductResponseDTO
-            {
-                id = products.id,
-                productName = products.productName,
-                description = products.description,
-                price = products.price,
-                quantity = products.quantity,
-                brandName = products.Brand.brandName,
-                categoryName = products.Category.categoryName
+            var products = await _context.products
+                .Where(temp => temp.quantity > 0 && !temp.isDeleted)
+                .Include(p => p.Category)
+                .Include(p => p.Brand)
+                .OrderBy(temp => temp.quantity)
+                .ToListAsync();
 
+            var productResponse = products.Select(p => new ProductResponseDTO
+            {
+                id = p.id,
+                productName = p.productName,
+                description = p.description,
+                price = p.price,
+                quantity = p.quantity,
+                brandName = p.Brand?.brandName,
+                categoryName = p.Category?.categoryName
             }).ToList();
+
             return productResponse;
         }
         public async Task<bool> ProductExists(int id)
