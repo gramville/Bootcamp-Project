@@ -44,7 +44,8 @@
         }
         public async Task<int> GetIdByCategoryName(string CategoryName)
         {
-            return await _context.categories.Where(temp => temp.categoryName == CategoryName).Select(temp => temp.id).DefaultIfEmpty(0).FirstOrDefaultAsync();
+            var category = await _context.categories.FirstOrDefaultAsync(temp => temp.categoryName == CategoryName);
+            return category == null ? 0 : category.id;
         }
     }
 }
