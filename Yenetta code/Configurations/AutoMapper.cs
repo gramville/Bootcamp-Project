@@ -21,9 +21,10 @@ namespace Yenetta_code.Configurations
                .ForMember(dest => dest.quantity, opt => opt.Condition((src, dest) => src.quantity != null));
             CreateMap<Brand,AddBrandDTO>();
             CreateMap<AddBrandDTO,Brand>();
-            CreateMap<Brand, UpdateBrandDTO>()
+            CreateMap<Brand, UpdateBrandDTO>();
+            CreateMap<UpdateBrandDTO,Brand>()
+
                  .ForMember(dest => dest.brandName, opt => opt.Condition((src, dest) => src.brandName != null));
-            CreateMap<UpdateBrandDTO,Brand>();
             CreateMap<Category,AddCategoryDTO>();
             CreateMap<AddCategoryDTO,Category>();
             CreateMap<Category,UpdateCategoryDTO>();
