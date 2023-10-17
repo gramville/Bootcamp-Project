@@ -47,6 +47,7 @@ namespace Yenetta_code.Models.Services
         public async Task<int> GetIdByBrandName(string BrandName)
         {
             var brand = await _context.brands.FirstOrDefaultAsync(temp => temp.brandName == BrandName);
+            Console.WriteLine("The brand id is : " + brand.id);
             return brand == null ? 0 : brand.id;
         }
     }

@@ -38,14 +38,17 @@ namespace Yenetta_code.Controllers
         {
             var slug = Slug.CreateSlug(product.productName);
             int brandId = await _brandService.GetIdByBrandName(product.brandName);
+            Console.WriteLine("The brand id is: " + brandId);
             if(brandId == 0)
             {
                 ModelState.AddModelError("brandName", "Invalid brand name");
+                return View(product);
             }
             int categoryId = await _categoryService.GetIdByCategoryName(product.categoryName);
             if (categoryId == 0)
             {
                 ModelState.AddModelError("categoryName", "Invalid brand name");
+                return View(product);
             }
 
             if (await _productService.ProductNameExists(slug))
@@ -64,6 +67,8 @@ namespace Yenetta_code.Controllers
                 return View(product);
             }
             var PRODUCT = _mapper.Map<Product>(product);
+            PRODUCT.BrandId = brandId;
+            PRODUCT.CategoryId = categoryId;
             PRODUCT.slug = slug;
             var newId = await _productService.Add(PRODUCT);
             if (newId != 0)
