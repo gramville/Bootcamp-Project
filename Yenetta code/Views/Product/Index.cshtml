@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Yenetta_code.Models.Product>
+﻿@model IEnumerable<Yenetta_code.Models.DTOs.ResponseDTOs.ProductResponseDTO>
 
 @{
     ViewData["Title"] = "Index";
@@ -37,10 +37,10 @@
                 @Html.DisplayNameFor(model => model.quantity)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Brand.brandName)
+                @Html.DisplayNameFor(model => model.brandName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Category.categoryName)
+                @Html.DisplayNameFor(model => model.categoryName)
             </th>
             <th></th>
         </tr>
@@ -61,10 +61,10 @@
                 @Html.DisplayFor(modelItem => item.quantity)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Brand.brandName)
+                @Html.DisplayFor(modelItem => item.brandName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Category.id)
+                @Html.DisplayFor(modelItem => item.id)
             </td>
             <td>
                 <a asp-action="Update" asp-route-id="@item.id">Edit</a> |
