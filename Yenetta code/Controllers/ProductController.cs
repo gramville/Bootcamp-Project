@@ -32,7 +32,7 @@ namespace Yenetta_code.Controllers
         public async Task<IActionResult> Create(Product product)
         {
             var slug = Slug.CreateSlug(product.productName);
-            int brandId = _brandService.GetIdByBrandName(product.b);
+            //int brandId = _brandService.GetIdByBrandName(product.b);
             int categoryId = 0;
 
             if(await _productService.ProductNameExists(slug))
@@ -50,6 +50,7 @@ namespace Yenetta_code.Controllers
                 ModelState.AddModelError("quantity", "quantity must be greater than zero.");
                 return View(product);
             }
+            return View();
 
         }
     }
