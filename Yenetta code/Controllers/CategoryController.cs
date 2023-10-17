@@ -112,6 +112,7 @@ namespace Yenetta_code.Controllers
                 return RedirectToAction("Index");
             }
             CATEGORY.isDeleted = true;
+            await _CategoryService.Delete(CATEGORY);
             TempData["DeletedCategory"] = "Category deleted successfully";
             return RedirectToAction("Index");
         }

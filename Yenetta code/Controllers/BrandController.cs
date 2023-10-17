@@ -113,6 +113,7 @@ namespace Yenetta_code.Controllers
                 return RedirectToAction("Index");
             }
             BRAND.isDeleted = true;
+            await _brandService.Delete(BRAND);
             TempData["DeletedBrand"] = "Brand deleted successfully";
             return RedirectToAction("Index");
         }
