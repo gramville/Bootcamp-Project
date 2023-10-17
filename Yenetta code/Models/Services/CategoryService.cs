@@ -38,5 +38,13 @@
         {
             return await _context.categories.AnyAsync(temp => temp.slug == CategorySlug);
         }
+        public async Task<List<string>> GetCategoryNames()
+        {
+            return await _context.categories.Select(temp => temp.categoryName).ToListAsync();
+        }
+        public async Task<int> GetIdByCategoryName(string CategoryName)
+        {
+            return await _context.categories.Where(temp => temp.categoryName == CategoryName).Select(temp => temp.id).DefaultIfEmpty(0).FirstOrDefaultAsync();
+        }
     }
 }

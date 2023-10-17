@@ -9,5 +9,7 @@
         Task<List<Category>> GetAll();
         Task<bool> CategoryExists(int id);
         Task<bool> CategoryNameExists(string CategorySlug);
+        Task<List<string>> GetCategoryNames();
+        Task<int> GetIdByCategoryName(string CategoryName);
     }
 }

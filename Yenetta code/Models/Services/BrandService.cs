@@ -38,5 +38,13 @@
         {
             return await _context.brands.AnyAsync(temp => temp.slug == BrandSlug);
         }
+        public async Task<List<string>> GetBrandNames()
+        {
+            return await _context.brands.Select(temp => temp.brandName).ToListAsync();
+        }
+        public async Task<int> GetIdByBrandName(string BrandName)
+        {
+            return await _context.brands.Where(temp => temp.brandName == BrandName).Select(temp => temp.id).DefaultIfEmpty(0).FirstOrDefaultAsync();
+        }
     }
 }

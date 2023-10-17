@@ -9,5 +9,7 @@
         Task<List<Brand>> GetAll();
         Task<bool> BrandExists(int id);
         Task<bool> BrandNameExists(string BrandSlug);
+        Task<List<string>> GetBrandNames();
+        Task<int> GetIdByBrandName(string BrandName);
     }
 }
