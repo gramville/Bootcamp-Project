@@ -11,8 +11,8 @@ namespace Yenetta_code.Models
         public string description { get; set; }
         public float price { get; set; }
         public int quantity { get; set; }
-        public int? CategoryId { get; set; }
-        public int? BrandId { get; set; }
+        public int CategoryId { get; set; }
+        public int BrandId { get; set; }
         public bool isDeleted { get; set; } = false;
 
 
