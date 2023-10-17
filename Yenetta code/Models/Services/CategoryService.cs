@@ -28,7 +28,7 @@
         }
         public async Task<List<Category>> GetAll()
         {
-            return await _context.categories.ToListAsync();
+            return await _context.categories.Where(temp => !temp.isDeleted).ToListAsync();
         }
         public async Task<bool> CategoryExists(int id)
         {
@@ -40,7 +40,7 @@
         }
         public async Task<List<string>> GetCategoryNames()
         {
-            return await _context.categories.Select(temp => temp.categoryName).ToListAsync();
+            return await _context.categories.Where(temp => !temp.isDeleted).Select(temp => temp.categoryName).ToListAsync();
         }
         public async Task<int> GetIdByCategoryName(string CategoryName)
         {

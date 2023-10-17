@@ -28,7 +28,7 @@
         }
         public async Task<List<Product>> GetAll()
         {
-            return await _context.products.Where(temp => temp.quantity > 0).OrderBy(temp => temp.quantity).ToListAsync();
+            return await _context.products.Where(temp => temp.quantity > 0 && !temp.isDeleted).OrderBy(temp => temp.quantity).ToListAsync();
         }
         public async Task<bool> ProductExists(int id)
         {

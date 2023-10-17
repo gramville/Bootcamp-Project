@@ -1,4 +1,6 @@
-﻿namespace Yenetta_code.Models.Services
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace Yenetta_code.Models.Services
 {
     public class BrandService : IBrandService
     {
@@ -28,7 +30,7 @@
         }
         public async Task<List<Brand>> GetAll()
         {
-            return await _context.brands.ToListAsync();
+            return await _context.brands.Where(temp => !temp.isDeleted).ToListAsync();
         }
         public async Task<bool> BrandExists(int id)
         {
@@ -40,7 +42,7 @@
         }
         public async Task<List<string>> GetBrandNames()
         {
-            return await _context.brands.Select(temp => temp.brandName).ToListAsync();
+            return await _context.brands.Where(temp => !temp.isDeleted).Select(temp => temp.brandName).ToListAsync();
         }
         public async Task<int> GetIdByBrandName(string BrandName)
         {
