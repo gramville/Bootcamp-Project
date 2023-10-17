@@ -39,7 +39,7 @@ namespace Yenetta_code.Controllers
             var BRAND = _mapper.Map<Brand>(brand);
             BRAND.slug = slug;
             var newId = await _brandService.Add(BRAND);
-            if (newId == 0)
+            if (newId != 0)
             {
                 TempData["AddedBrand"] = "Brand added successfully";
                 return RedirectToAction("Index");
@@ -82,7 +82,7 @@ namespace Yenetta_code.Controllers
             var BRAND = _mapper.Map<UpdateBrandDTO, Brand>(brand, updatedbrand);
             BRAND.slug = (!string.IsNullOrEmpty(brand.brandName)) ? slug : BRAND.slug;
             var newId = await _brandService.Update(BRAND);
-            if (newId == 0)
+            if (newId != 0)
             {
                 TempData["UpdatedBrand"] = "Brand updated successfully";
                 return RedirectToAction("Index");

@@ -38,7 +38,7 @@ namespace Yenetta_code.Controllers
             var Category = _mapper.Map<Category>(category);
             Category.slug = slug;
             var newId = await _CategoryService.Add(Category);
-            if (newId == 0)
+            if (newId != 0)
             {
                 TempData["AddedCategory"] = "Category added successfully";
                 return RedirectToAction("Index");
@@ -81,7 +81,7 @@ namespace Yenetta_code.Controllers
             var CATEGORY = _mapper.Map<UpdateCategoryDTO, Category>(category, updatedCategory);
             CATEGORY.slug = (!string.IsNullOrEmpty(category.categoryName)) ? slug : updatedCategory.slug;
             var newId = await _CategoryService.Update(CATEGORY);
-            if (newId == 0)
+            if (newId != 0)
             {
                 TempData["UpdatedCategory"] = "Category updated successfully";
                 return RedirectToAction("Index");

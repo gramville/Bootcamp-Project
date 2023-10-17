@@ -66,7 +66,7 @@ namespace Yenetta_code.Controllers
             var PRODUCT = _mapper.Map<Product>(product);
             PRODUCT.slug = slug;
             var newId = await _productService.Add(PRODUCT);
-            if (newId == 0)
+            if (newId != 0)
             {
                 TempData["AddedProduct"] = "Product added successfully";
                 return RedirectToAction("Index");
@@ -144,7 +144,7 @@ namespace Yenetta_code.Controllers
             PRODUCT.CategoryId = (categoryId != 0) ? categoryId : PRODUCT.BrandId;
             PRODUCT.slug = (!string.IsNullOrEmpty(product.productName)) ? slug : PRODUCT.slug;
             var newId = await _productService.Update(PRODUCT);
-            if (newId == 0)
+            if (newId != 0)
             {
                 TempData["UpdatedProduct"] = "Product updated successfully";
                 return RedirectToAction("Index");
