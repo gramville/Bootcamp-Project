@@ -50,5 +50,9 @@ namespace Yenetta_code.Models.Services
             Console.WriteLine("The brand id is : " + brand.id);
             return brand == null ? 0 : brand.id;
         }
+        public async Task<List<Brand>> DeletedBrands()
+        {
+            return await _context.brands.Where(temp => temp.isDeleted).ToListAsync();
+        }
     }
 }
