@@ -12,5 +12,6 @@
         Task<List<string>> GetCategoryNames();
         Task<int> GetIdByCategoryName(string CategoryName);
         Task<List<Category>> DeletedCaegories();
+        Task<int> RestoreDeletedCategory(Category category);
     }
 }

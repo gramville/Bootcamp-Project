@@ -51,5 +51,11 @@
         {
             return await _context.categories.Where(temp => temp.isDeleted).ToListAsync();
         }
+        public async Task<int> RestoreDeletedCategory(Category category)
+        {
+            await _context.SaveChangesAsync();
+            return category.id;
+        }
     }
+
 }
