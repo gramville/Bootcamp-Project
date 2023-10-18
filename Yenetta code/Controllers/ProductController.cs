@@ -191,6 +191,31 @@ namespace Yenetta_code.Controllers
             var deletedProducts = await _productService.DeletedProducts();
             return View(deletedProducts);
         }
+        [HttpPost]
+        public async Task<IActionResult> RestoreProduct(int id)
+        {
+            var PRODUCT = await _brandService.GetById(id);
+            if (PRODUCT == null)
+            {
+                return RedirectToAction("DeletedProducts");
+            }
+            if (PRODUCT.isDeleted)
+            {
+                PRODUCT.isDeleted = false;
+                var newId = await _brandService.RestoreDeletedBrand(PRODUCT);
+                if (newId != 0)
+                {
+                    TempData["RestoreProduct"] = "Product restored successfully";
+                    return RedirectToAction("DeletedProducts");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Something went wrong on our end. Try again in a few minutes.");
+                    return View(PRODUCT);
+                }
+            }
+            return RedirectToAction("DeletedProducts");
+        }
 
     }
 }
