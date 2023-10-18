@@ -116,5 +116,10 @@ namespace Yenetta_code.Controllers
             TempData["DeletedCategory"] = "Category deleted successfully";
             return RedirectToAction("Index");
         }
+        public async Task<IActionResult> DeletedCategories()
+        {
+            var deletedCategories = await _CategoryService.DeletedCaegories();
+            return View(deletedCategories);
+        }
     }
 }
