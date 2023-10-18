@@ -47,5 +47,9 @@
             var category = await _context.categories.FirstOrDefaultAsync(temp => temp.categoryName == CategoryName);
             return category == null ? 0 : category.id;
         }
+        public async Task<List<Category>> DeletedCaegories()
+        {
+            return await _context.categories.Where(temp => temp.isDeleted).ToListAsync();
+        }
     }
 }

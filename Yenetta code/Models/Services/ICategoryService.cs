@@ -11,5 +11,6 @@
         Task<bool> CategoryNameExists(string CategorySlug);
         Task<List<string>> GetCategoryNames();
         Task<int> GetIdByCategoryName(string CategoryName);
+        Task<List<Category>> DeletedCaegories();
     }
 }
