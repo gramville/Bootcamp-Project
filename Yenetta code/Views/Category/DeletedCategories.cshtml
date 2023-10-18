@@ -3,7 +3,10 @@
 @{
     ViewData["Title"] = "Deleted brands";
 }
-
+@if (TempData["RestoreCategory"] != null)
+{
+    <div class="alert alert-success">@TempData["RestoreCategory"]</div>
+}
 
 <h1>Index</h1>
 
