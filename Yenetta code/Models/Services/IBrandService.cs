@@ -12,5 +12,6 @@
         Task<List<string>> GetBrandNames();
         Task<int> GetIdByBrandName(string BrandName);
         Task<List<Brand>> DeletedBrands();
+        Task<int> RestoreDeletedBrand(Brand brand);
     }
 }

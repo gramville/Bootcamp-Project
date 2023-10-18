@@ -54,5 +54,10 @@ namespace Yenetta_code.Models.Services
         {
             return await _context.brands.Where(temp => temp.isDeleted).ToListAsync();
         }
+        public async Task<int> RestoreDeletedBrand(Brand brand)
+        {
+            await _context.SaveChangesAsync();
+            return brand.id;
+        }
     }
 }
