@@ -193,7 +193,7 @@ namespace Yenetta_code.Controllers
         }
         public async Task<IActionResult> RestoreProduct(int id)
         {
-            var PRODUCT = await _brandService.GetById(id);
+            var PRODUCT = await _productService.GetById(id);
             if (PRODUCT == null)
             {
                 return RedirectToAction("DeletedProducts");
@@ -201,7 +201,7 @@ namespace Yenetta_code.Controllers
             if (PRODUCT.isDeleted)
             {
                 PRODUCT.isDeleted = false;
-                var newId = await _brandService.RestoreDeletedBrand(PRODUCT);
+                var newId = await _productService.RestoreDeletedProduct(PRODUCT);
                 if (newId != 0)
                 {
                     TempData["RestoreProduct"] = "Product restored successfully";
