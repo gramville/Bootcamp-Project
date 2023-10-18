@@ -186,6 +186,11 @@ namespace Yenetta_code.Controllers
             return RedirectToAction("Index");
 
         }
-        
+        public async Task<IActionResult> DeletedProducts()
+        {
+            var deletedProducts = await _productService.DeletedProducts();
+            return View(deletedProducts);
+        }
+
     }
 }
