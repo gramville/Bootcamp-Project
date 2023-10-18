@@ -80,6 +80,11 @@ namespace Yenetta_code.Models.Services
 
             return productResponse;
         }
+        public async Task<int> RestoreDeletedProduct(Product product)
+        {
+            await _context.SaveChangesAsync();
+            return product.id;
+        }
 
     }
 }
