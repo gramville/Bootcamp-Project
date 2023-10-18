@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Yenetta_code.Models.Category>
+
+@{
+    ViewData["Title"] = "Deleted categories";
+}
+
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Index">Go back</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.categoryName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.categoryName)
+                </td>
+                <td>
+                    <a asp-action="RestoreCategory" asp-route-id="@item.id">Restore</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>
+    <a asp-action="Index">Go back</a>
+</p>
