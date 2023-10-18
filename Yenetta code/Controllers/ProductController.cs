@@ -191,7 +191,6 @@ namespace Yenetta_code.Controllers
             var deletedProducts = await _productService.DeletedProducts();
             return View(deletedProducts);
         }
-        [HttpPost]
         public async Task<IActionResult> RestoreProduct(int id)
         {
             var PRODUCT = await _brandService.GetById(id);

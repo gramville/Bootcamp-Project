@@ -122,7 +122,6 @@ namespace Yenetta_code.Controllers
             var deletedBrands = await _brandService.DeletedBrands();
             return View(deletedBrands);
         }
-        [HttpPost]
         public async Task<IActionResult> RestoreBrand(int id)
         {
             var BRAND = await _brandService.GetById(id);

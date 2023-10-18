@@ -121,7 +121,6 @@ namespace Yenetta_code.Controllers
             var deletedCategories = await _CategoryService.DeletedCaegories();
             return View(deletedCategories);
         }
-        [HttpPost]
         public async Task<IActionResult> RestoreCategory(int id)
         {
             var CATEGORY = await _CategoryService.GetById(id);
