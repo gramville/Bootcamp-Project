@@ -133,7 +133,7 @@ namespace Yenetta_code.Controllers
             if(BRAND.isDeleted)
             {
                 BRAND.isDeleted = false;
-                var newId = await _brandService.Update(BRAND);
+                var newId = await _brandService.RestoreDeletedBrand(BRAND);
                 if (newId != 0)
                 {
                     TempData["RestoreBrand"] = "Brand restored successfully";

@@ -121,5 +121,30 @@ namespace Yenetta_code.Controllers
             var deletedCategories = await _CategoryService.DeletedCaegories();
             return View(deletedCategories);
         }
+        [HttpPost]
+        public async Task<IActionResult> RestoreCategory(int id)
+        {
+            var CATEGORY = await _CategoryService.GetById(id);
+            if (CATEGORY == null)
+            {
+                return RedirectToAction("DeletedCategories");
+            }
+            if (CATEGORY.isDeleted)
+            {
+                CATEGORY.isDeleted = false;
+                var newId = await _CategoryService.RestoreDeletedCategory(CATEGORY);
+                if (newId != 0)
+                {
+                    TempData["RestoreCategory"] = "Category restored successfully";
+                    return RedirectToAction("DeletedCategories");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Something went wrong on our end. Try again in a few minutes.");
+                    return View(CATEGORY);
+                }
+            }
+            return RedirectToAction("DeletedCategories");
+        }
     }
 }
