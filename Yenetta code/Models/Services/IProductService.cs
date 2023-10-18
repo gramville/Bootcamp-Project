@@ -11,5 +11,6 @@ namespace Yenetta_code.Models.Services
         Task<List<ProductResponseDTO>> GetAll();
         Task<bool> ProductExists(int id);
         Task<bool> ProductNameExists(string productSlug);
+        Task<List<ProductResponseDTO>> DeletedProducts();
     }
 }

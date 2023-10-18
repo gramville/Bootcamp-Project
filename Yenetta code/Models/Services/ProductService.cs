@@ -58,5 +58,28 @@ namespace Yenetta_code.Models.Services
         {
             return await _context.products.AnyAsync(temp => temp.slug == productSlug);
         }
+        public async Task<List<ProductResponseDTO>> DeletedProducts()
+        {
+            var products = await _context.products
+                .Where(temp => temp.isDeleted)
+                .Include(p => p.Category)
+                .Include(p => p.Brand)
+                .OrderBy(temp => temp.quantity)
+                .ToListAsync();
+
+            var productResponse = products.Select(p => new ProductResponseDTO
+            {
+                id = p.id,
+                productName = p.productName,
+                description = p.description,
+                price = p.price,
+                quantity = p.quantity,
+                brandName = p.Brand?.brandName,
+                categoryName = p.Category?.categoryName
+            }).ToList();
+
+            return productResponse;
+        }
+
     }
 }
