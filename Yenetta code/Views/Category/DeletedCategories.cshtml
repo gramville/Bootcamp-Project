@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Yenetta_code.Models.Brand>
+﻿@model IEnumerable<Yenetta_code.Models.Category>
 
 @{
     ViewData["Title"] = "Deleted brands";
@@ -17,7 +17,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.brandName)
+                @Html.DisplayNameFor(model => model.categoryName)
             </th>
             <th></th>
         </tr>
@@ -27,10 +27,10 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.brandName)
+                    @Html.DisplayFor(modelItem => item.categoryName)
                 </td>
                 <td>
-                    <a asp-action="RestoreBrand" asp-route-id="@item.id">Restore</a>
+                    <a asp-action="RestoreCategory" asp-route-id="@item.id">Restore</a>
                 </td>
             </tr>
         }
