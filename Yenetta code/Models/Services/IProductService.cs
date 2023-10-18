@@ -12,5 +12,6 @@ namespace Yenetta_code.Models.Services
         Task<bool> ProductExists(int id);
         Task<bool> ProductNameExists(string productSlug);
         Task<List<ProductResponseDTO>> DeletedProducts();
+        Task<int> RestoreDeletedProduct(Product product);
     }
 }

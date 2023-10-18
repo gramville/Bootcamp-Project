@@ -122,5 +122,30 @@ namespace Yenetta_code.Controllers
             var deletedBrands = await _brandService.DeletedBrands();
             return View(deletedBrands);
         }
+        [HttpPost]
+        public async Task<IActionResult> RestoreBrand(int id)
+        {
+            var BRAND = await _brandService.GetById(id);
+            if(BRAND == null)
+            {
+                return RedirectToAction("DeletedBrands");
+            }
+            if(BRAND.isDeleted)
+            {
+                BRAND.isDeleted = false;
+                var newId = await _brandService.Update(BRAND);
+                if (newId != 0)
+                {
+                    TempData["RestoreBrand"] = "Brand restored successfully";
+                    return RedirectToAction("DeletedBrands");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Something went wrong on our end. Try again in a few minutes.");
+                    return View(BRAND);
+                }
+            }
+            return RedirectToAction("DeletedBrands");
+        }
     }
 }
