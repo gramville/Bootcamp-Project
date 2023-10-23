@@ -144,9 +144,11 @@ namespace Yenetta_code.Controllers
                 ModelState.AddModelError("quantity", "quantity must be greater than zero.");
                 return View(product);
             }
+            brandId = (brandId != 0) ? brandId : updatedProduct.BrandId;
+            categoryId = (categoryId != 0) ? categoryId : updatedProduct.CategoryId;
             var PRODUCT = _mapper.Map<UpdateProductDTO, Product>(product, updatedProduct);
-            PRODUCT.BrandId = (brandId != 0) ? brandId : PRODUCT.BrandId;
-            PRODUCT.CategoryId = (categoryId != 0) ? categoryId : PRODUCT.BrandId;
+            PRODUCT.BrandId = brandId;
+            PRODUCT.CategoryId = categoryId;
             PRODUCT.slug = (!string.IsNullOrEmpty(product.productName)) ? slug : PRODUCT.slug;
             var newId = await _productService.Update(PRODUCT);
             if (newId != 0)

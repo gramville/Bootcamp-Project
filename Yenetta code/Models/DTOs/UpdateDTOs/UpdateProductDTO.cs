@@ -9,5 +9,7 @@
         public int? quantity { get; set; }
         public string? categoryName { get; set; }
         public string? brandName { get; set; }
+        public int? brandId { get; set; }
+        public int? categoryId { get; set; }
     }
 }
