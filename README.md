@@ -55,3 +55,7 @@ Categories: Organize products into categories. Create new categories, update exi
 Deleted Items: View a list of deleted products, brands, and categories. You can choose to restore any deleted item as needed.
 ## Screenshots
 
+
+https://github.com/gramville/Bootcamp-Project/assets/111007717/d341bd7f-88eb-4f6b-99d6-34b6b0e8394f
+
+
