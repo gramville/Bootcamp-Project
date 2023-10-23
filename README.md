@@ -33,7 +33,7 @@ To run the application locally, follow these steps:
 7. In the Package Manager Console, run the following command to add a new migration:
 
    7.1 Add-Migration MigrationName
-     Replace "MigrationName" with a descriptive name for your migration.
+     (Replace "MigrationName" with a descriptive name for your migration.)
 
     After the migration is created, run the following command in the Package Manager Console to apply the migration and update the database:
 
@@ -53,4 +53,5 @@ Brands: Manage brands by creating new ones, updating existing ones, and deleting
 Categories: Organize products into categories. Create new categories, update existing ones, and remove categories when necessary.
 
 Deleted Items: View a list of deleted products, brands, and categories. You can choose to restore any deleted item as needed.
+## Screenshots
 
